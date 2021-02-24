@@ -2,10 +2,10 @@ const mongoose = require('../config/connectDB')
 let userSchema = {
     email: String,
     username: String,
-    age: Number,
     phone: Number,
+    school: String,
     password: Number
 }
-let model2 = mongoose.model("user", userSchema)
+let model = mongoose.model("user", userSchema)
 
-module.exports = model2
+module.exports = model

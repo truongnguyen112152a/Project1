@@ -1,7 +1,7 @@
-const mongoose2 = require('mongoose')
-mongoose2.connect('mongodb://localhost:27017/general-users',{
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/project1',{
     useNewUrlParser: true, 
     useUnifiedTopology: true
 })
 
-module.exports = mongoose2
+module.exports = mongoose

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const service2 = require('../service/serviceControl')
+const service2 = require('../services/serviceControl')
 
 router.post("/",(req,res) => {
     var email = req.body.email

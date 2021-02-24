@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.html-home {
+    height: 100%;
+}
+.body-home {
+    background-image: url("../image/195-1951575_1920x1080-popular-dark-hardwood-floor-wallpaper-dark-black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+.parent {
+    color: white;
+}
