@@ -12,6 +12,9 @@
     background-size: cover;
     padding: 20px;
 }
+.parent th {
+    color: #192a56;
+}
 .parent {
-    color: white;
+    margin-top: 10px;
 }

@@ -13,5 +13,12 @@
     padding: 20px;
 }
 .parent {
-    color: white;
+    margin-top: 10px;
+}
+.parent th {
+    color: #192a56;
+}
+.btn-header {
+    display: flex;
+    justify-content: space-between;
 }
