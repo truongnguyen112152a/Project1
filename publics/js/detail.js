@@ -69,6 +69,8 @@ function doneChange() {
             alert("cập nhật dữ liệu thành công")
             return myDetail()
         }
+        console.log("ok");
+        return alert("email này đã tồn tại")
     }).catch((err) => {
         alert(err)
     });

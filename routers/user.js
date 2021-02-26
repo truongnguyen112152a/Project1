@@ -115,18 +115,32 @@ router.put("/:id",(req,res) => {
         school,
         password,
     }
-    user.updateUser(req.params.id,obj)
+    user.existsLogin(email)
     .then((data) => {
+        if(!data) {
+            return user.updateUser(req.params.id,obj)
+            .then((data) => {
+                res.json({
+                    error: false,
+                    messenge: "cập nhật dữ liệu thành công",
+                    value: data
+                })
+            }).catch((err) => {
+                res.json({
+                    error: true,
+                    messenge: err
+                })   
+            });
+        }
         res.json({
-            error: false,
-            messenge: "cập nhật dữ liệu thành công",
-            value: data
+            error: true,
+            messenge: "email này đã tồn tại"
         })
     }).catch((err) => {
         res.json({
             error: true,
             messenge: err
-        })   
+        })
     });
 })
 router.delete("/:id",(req,res) => {
