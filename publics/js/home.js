@@ -39,6 +39,9 @@ function sumArr(data) {
     if(data.length > 2) return 1
     return data.push(2)
 }
+function subArr(data) {
+    if(data.length === 2) return data.pop()
+}
 function toChange() {
     if(arrChange.length !== 2) {
         $("#int-email").val("")
@@ -51,7 +54,7 @@ function toChange() {
 function change(data) {
     return alert(data)
 }
-function doneChange(data) {
+function doneChange() {
     let email = $("#int-email").val()
     let username = $("#int-username").val()
     let phone = $("#int-phone").val()
@@ -80,7 +83,8 @@ function doneChange(data) {
         .then((data) => {
             if (!data.error) {
                 alert("tạo dữ liệu thành công")
-                return showData()
+                showData()
+                return subArr(arrChange)
             }
             alert("email này đã tồn tại")
             return sumArr(arrChange)

@@ -5,20 +5,30 @@
 }
 .html-home {
     height: 100%;
+    
 }
 .body-home {
-    background-image: url("../image/195-1951575_1920x1080-popular-dark-hardwood-floor-wallpaper-dark-black.jpg");
+    background-image: url("../image/DS2YUZ1VwAET0mW.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 20px;
+    /* height: 100%; */
+    position: relative;
 }
-.parent {
-    margin-top: 10px;
+.parent-content {
+    margin: 0 10px 0 10px;
 }
-.parent th {
+.parent-content th {
     color: #192a56;
 }
 .btn-header {
     display: flex;
     justify-content: space-between;
+    margin: 10px;
+}
+.btn-footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
