@@ -15,7 +15,7 @@ router.post("/",(req,res) => {
         school,
         password,
     }
-    user.existsLogin(email)
+    user.existsSignUp(email)
     .then((data) => {
         if(!data) {
             return user.createUser(obj)
@@ -73,23 +73,15 @@ router.get("/detail/:id",(req,res) => {
         })   
     });
 })
-router.get("/sign-up/:email/:pass",(req,res) => {
-    user.existsSignUp(req.params.email,req.params.pass)
+router.post("/login",(req,res) => {
+    user.existsLogin(req.body.email,req.body.password)
     .then((data) => {
         if(data) {
-            return user.getUserSignUp(req.params.email,req.params.pass)
-            .then((data) => {
-                res.json({
-                    error: false,
-                    messenge: "tài khoản này đã tồn tại",
-                    value: data
-                })
-            }).catch((err) => {
-                res.json({
-                    error: true,
-                    messenge: err
-                })   
-            });            
+            return res.json({
+                error: false,
+                messenge: "tài khoản này đã tồn tại",
+                value: data
+            })        
         }
         return res.json({
             error: true,
@@ -115,7 +107,7 @@ router.put("/:id",(req,res) => {
         school,
         password,
     }
-    user.existsLogin(email)
+    user.existsSignUp(email)
     .then((data) => {
         if(!data) {
             return user.updateUser(req.params.id,obj)

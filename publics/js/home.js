@@ -94,6 +94,6 @@ function doneChange() {
 }
 $("#idBtnBack").click(() => {
     if(confirm("Bạn có muốn thoát hay không?")) {
-        window.location.href = "/sign-up"
+        window.location.href = "/login"
     }
 })

@@ -1,34 +1,30 @@
 function myLogin() {
-    let email = $("#int-email").val()
-    let username = $("#int-username").val()
-    let phone = $("#int-phone").val()
-    let school = $("#int-school").val()
-    let password = $("#int-password").val()
-    if (!(email && username && phone && school && password)) {
-        return alert("không được để trống")
-    }
-    if (!(((!isNaN(phone)) && typeof Number(phone) === "number") &&
-        ((!isNaN(password)) && typeof Number(password) === "number"))) {
-        return alert("phone và password phải là số")
-    }
-    $.ajax({
-        url: "/user",
-        method: "POST",
-        data: {
-            email,
-            username,
-            phone,
-            school,
-            password
-        }
-    })
+    var email = $("#intEmail").val()
+    var password = $("#intPassword").val()
+    if(email && password) {
+        return $.ajax({
+            url: "/user/login",
+            method: "POST",
+            data: {
+                email,
+                password
+            }
+        })
         .then((data) => {
-            if (!data.error) {
-                alert("tạo tài khoản thành công")
+            if(!data.error) {
+                alert("Đăng nhập thành công")
+                return window.location.href = "/home"
+            }
+            alert("sai tài khoản hoặc mật khẩu")
+            if(confirm("bạn có muốn đăng ký") == true) {
                 return window.location.href = "/sign-up"
             }
-            alert("email này đã tồn tại")
         }).catch((err) => {
             alert(err)
         });
+    }
+    return alert("không được để trống")
+}
+function mySignUp() {
+    window.location.href = "/sign-up"
 }

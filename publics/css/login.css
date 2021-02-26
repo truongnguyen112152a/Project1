@@ -3,17 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-.html-sign-up {
+.html-login {
     height: 100%;
 }
-.body-sign-up {
+.body-login {
     background-image: url("../image/195-1951575_1920x1080-popular-dark-hardwood-floor-wallpaper-dark-black.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .parent {
     color: #ced6e0;
-    height: 550px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,11 +31,11 @@
         text-align: center;
     }
 }
-.btn-sign {
+.btn-login {
     display: flex;
     flex-direction: column;
 }
-.btn-sign button {
+.btn-login button {
     width: 150px;
     height: 40px;
     border: none;
@@ -43,7 +43,6 @@
     background: #3c6382;
     color: #ced6e0;
     font-weight: bold;
-    margin-top: 20px;
 }
 .parent input {
     width: 100%;

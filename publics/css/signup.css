@@ -13,7 +13,7 @@
 }
 .parent {
     color: #ced6e0;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -43,6 +43,7 @@
     background: #3c6382;
     color: #ced6e0;
     font-weight: bold;
+    margin-top: 20px;
 }
 .parent input {
     width: 100%;

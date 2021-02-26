@@ -8,12 +8,6 @@ function getUserID(data) {
         _id: data
     })
 }
-function getUserSignUp(data1,data2) {
-    return userModel.find({
-        email: data1,
-        password: data2
-    })
-}
 function createUser(data) {
     return userModel.create(data)
 }
@@ -27,12 +21,12 @@ function deleteUser(data) {
         _id: data
     })
 }
-function existsLogin(data) {
+function existsSignUp(data) {
     return userModel.exists({
         email: data
     })
 }
-function existsSignUp(data1,data2) {
+function existsLogin(data1,data2) {
     return userModel.exists({
         email: data1,
         password: data2
@@ -41,7 +35,6 @@ function existsSignUp(data1,data2) {
 module.exports = {
     getUser,
     getUserID,
-    getUserSignUp,
     createUser,
     updateUser,
     deleteUser,
