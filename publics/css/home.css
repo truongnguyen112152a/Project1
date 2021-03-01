@@ -31,3 +31,20 @@
     display: flex;
     justify-content: center;
 }
+.change-tab {
+    display: flex;
+}
+#idBack {
+    margin-right: 10px;
+}
+.number-page button {
+    margin-right: 10px;
+}
+.number-page button:focus {
+    background: #3c455e;
+    color: white;
+}
+.bg-button {
+    background: #3c455e;
+    color: white;
+}

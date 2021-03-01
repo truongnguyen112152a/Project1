@@ -1,0 +1,23 @@
+* Từ trang đăng nhập chuyển đến trang home :
+khi load trang home => page mặc định bằng 1 => get dữ liệu từ DB về
+=> số page = Math.ceil(tổng dữ liệu/số phần tử trên một trang)
+* Tại trang home :
+số button sẽ tăng lên khi data tăng,chỉ hiển thị 5 button,khi click nút next sẽ tăng 
+số button lên 5 button nữa
+
+trang số x :
+=> STT end = x * số phần tử/trang 
+=> STT start = end - số phần tử/trang + 1
+=> Resful API limit(số phần tử/trang),skip(số phần tử/trang * số trang)
+
+có hai cách để chuyển trang :
+- C1: chuyển trang bằng button
+    limit để mặc định là 7
+    click vào bất cứ một button nào sẽ gửi request (GET) lên với params là x
+    x = ( x - 1 ) * số phần tử/trang
+    => x sẽ truyền vào skip
+    lấy data về,STT tăng dần khi
+    giá trị của button tăng dần,
+- C2 chuyển trang bằng URL
+    khi nhập vào URL một giá trị theo params => request params đấy lên để lấy data 
+    tương ứng với số page

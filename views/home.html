@@ -23,8 +23,9 @@
     <!-- Button trigger modal -->
     <div class="btn-header">
         <button id="idBtnBack" type="button" class="btn btn-primary">Thoát</button>
+        <button onclick="autoData()" type="button" class="btn btn-outline-secondary">Tạo tự động</button>
         <button id="btn-create" type="button" class="btn btn-info" data-toggle="modal"
-        data-target="#exampleModal" onclick="toChange()">
+        data-target="#exampleModal" onclick="toAdd()">
             Tạo mới
         </button>
     </div>
@@ -85,7 +86,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                    <button type="button" id="create-user" class="btn btn-primary" data-dismiss="modal" onclick="doneChange()">Thêm</button>
+                    <button type="button" id="create-user" class="btn btn-primary" data-dismiss="modal" onclick="doneAdd()">Thêm</button>
                 </div>
             </div>
         </div>
@@ -107,12 +108,13 @@
     </div>
     <div class="btn-footer">
         <div class="change-tab">
-            <button type="button" class="btn btn-outline-secondary"><</button>
-            <button type="button" class="btn btn-outline-secondary">1</button>
-            <button type="button" class="btn btn-outline-secondary">></button>
+            <button id="idBack" type="button" class="btn btn-outline-secondary" onclick="myBack()"><</button>
+            <div class="number-page">
+                <!--thêm button đánh số trang-->
+            </div>
+            <button id="idNext" type="button" class="btn btn-outline-secondary" onclick="myNext()">></button>
         </div>
     </div>
-    
 </body>
 <script src="/js/home.js"></script>
 </html>

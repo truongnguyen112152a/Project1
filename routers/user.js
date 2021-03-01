@@ -58,6 +58,25 @@ router.get("/",(req,res) => {
         })   
     });
 })
+router.get("/:numPage",(req,res) => {
+    let x = Number(req.params.numPage)
+    x = (x - 1) * 7
+    user.getUser()
+    .skip(x)
+    .limit(7)
+    .then((data) => {
+        res.json({
+            error: false,
+            messenge: "hiển thị toàn bộ dữ liệu thành công",
+            value: data
+        })
+    }).catch((err) => {
+        res.json({
+            error: true,
+            messenge: err
+        })   
+    });
+})
 router.get("/detail/:id",(req,res) => {
     user.getUserID(req.params.id)
     .then((data) => {
